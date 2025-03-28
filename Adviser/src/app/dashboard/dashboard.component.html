@@ -1,0 +1,264 @@
+<nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-22 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button
+          type="button"
+          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!--
+              Icon when menu is closed.
+
+              Menu open: "hidden", Menu closed: "block"
+            -->
+          <svg
+            class="block size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <!--
+              Icon when menu is open.
+
+              Menu open: "block", Menu closed: "hidden"
+            -->
+          <svg
+            class="hidden size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+      >
+        <div class="flex shrink-0 items-center">
+          <img
+            class="h-8 w-auto"
+            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+            alt="Your Company"
+          />
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <button
+              class="rounded-md bg-gray-900 px-3 py-2 text-xl font-medium text-white"
+              aria-current="page"
+            >
+              Patient Health Dashboard
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+      >
+        <button
+          type="button"
+          class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+        >
+          <span class="absolute -inset-1.5"></span>
+          <span class="sr-only">View notifications</span>
+          <svg
+            class="size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+            />
+          </svg>
+        </button>
+
+        <!-- Profile dropdown -->
+        <div class="relative ml-3">
+          <div class="flex items-center px-4 gap-5">
+            <button
+              type="button"
+              class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+              id="user-menu-button"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <img
+                class="size-8 rounded-full"
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+            </button>
+            <button
+              type="button"
+              class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+              (click)="onLogout()"
+            >
+              <span class="material-symbols-outlined"> logout </span>
+              Logout
+            </button>
+          </div>
+
+          <!--
+              Dropdown menu, show/hide based on menu state.
+
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+</nav>
+<div class="w-full h-full flex justify-center p-8">
+  <main
+    class="block w-8/10 text-xl text-center flex flex-col justify-center items-center text-emerald-800p-4 h-[500px]"
+  >
+    <div class="grid grid-rows-3 grid-cols-4 gap-4 h-full">
+      <div
+        class="row-span-3 profile bg-red-400 rounded-2xl flex flex-col justify-center items-center px-8"
+      >
+        <div class="patient-photo rounded-xl overflow-hidden">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_XLR5oupuwYTeLMinLKBwExRrJ4sXzMYd7w&s"
+            alt=""
+          />
+        </div>
+        <div
+          class="name font-sans text-3xl antialiased font-medium text-amber-50 p-2"
+        >
+          Leela Krishana
+        </div>
+        <div class="email text-xl font-thin text-gray-900 text-white">
+          avatargmail.com
+        </div>
+      </div>
+      <div
+        class="weight rounded-lg bg-gray-800 text-xl text-center flex flex-col justify-center items-center text-green-800 gap-2"
+      >
+        <div class="title">
+          <h3 class="text-2xl font-bold">Weight</h3>
+        </div>
+        <div class="content">
+          <div class="weight-value text-white text-2xl">70KG</div>
+          <div class="logo">
+            <span class="material-symbols-outlined"> monitor_weight </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Temparature rounded-lg bg-gray-800 text-xl text-center flex flex-col justify-center items-center text-green-800 gap-2"
+      >
+        <div class="title">
+          <h3 class="text-2xl font-bold">Temparature</h3>
+        </div>
+        <div class="content">
+          <div class="Temparature-value text-white text-2xl">70C</div>
+
+          <div class="logo">
+            <span class="material-symbols-outlined"> device_thermostat </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Heart Rate rounded-lg bg-gray-800 text-xl text-center flex flex-col justify-center items-center text-green-800 gap-2"
+      >
+        <div class="title">
+          <h3 class="text-2xl font-bold">Heart Rate</h3>
+        </div>
+        <div class="content">
+          <div class="Heart Rate-value text-white text-2xl">70BPM</div>
+          <div class="logo">
+            <span class="material-symbols-outlined"> ecg_heart </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Blood Pressure rounded-lg bg-gray-800 text-xl text-center flex flex-col justify-center items-center text-green-800 gap-2"
+      >
+        <div class="title">
+          <h3 class="text-2xl font-bold">Blood Pressure</h3>
+        </div>
+        <div class="content">
+          <div class="Blood Pressure-value text-white text-2xl">70</div>
+          <div class="logo">
+            <span class="material-symbols-outlined"> blood_pressure </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Height rounded-lg bg-gray-800 text-xl text-center flex flex-col justify-center items-center text-green-800 gap-2"
+      >
+        <div class="title">
+          <h3 class="text-2xl font-bold">Height</h3>
+        </div>
+        <div class="content">
+          <div class="Height-value text-white text-2xl">70</div>
+          <div class="logo">
+            <span class="material-symbols-outlined"> straighten </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Oxygen Saturation rounded-lg bg-gray-800 text-xl text-center flex flex-col justify-center items-center text-green-800 gap-2"
+      >
+        <div class="title">
+          <h3 class="text-2xl font-bold">Oxygen Saturation</h3>
+        </div>
+        <div class="content">
+          <div class="Oxygen Saturation-value text-white text-2xl">70</div>
+          <div class="logo">
+            <span class="material-symbols-outlined"> pulmonology </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="BMI rounded-lg bg-gray-800 text-xl text-center flex flex-col justify-center items-center text-green-800 gap-2"
+      >
+        <div class="title">
+          <h3 class="text-2xl font-bold">BMI</h3>
+        </div>
+        <div class="content">
+          <div class="BMI-value text-white text-2xl">70</div>
+          <div class="logo">
+            <span class="material-symbols-outlined"> percent </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
