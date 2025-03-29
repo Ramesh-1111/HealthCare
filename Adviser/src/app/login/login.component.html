@@ -1,15 +1,13 @@
 <div
-  class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 poppins-bold"
+  class="flex w-full h-screen flex-row justify-center px-6 py-12 lg:px-8 poppins-bold items-center bg-navy"
 >
-  <div class="flex flex-col">
+  <div class="flex w-1/2 min-h-full justify-end items-center">
+    <img src="logo.png" alt="" class="h-110 w-100 object-cover" />
+  </div>
+  <div class="flex flex-col w-1/2">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-      <img
-        class="mx-auto h-10 w-auto"
-        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-        alt="Your Company"
-      />
       <h2
-        class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900"
+        class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-pink-50"
       >
         Login to your account
       </h2>
@@ -20,7 +18,8 @@
         <div>
           <label
             for="username"
-            class="block text-sm/6 font-medium text-gray-900"
+            class="block text-sm/6 font-medium text-slate-100"
+            au
             >User Name</label
           >
           <div class="mt-2">
@@ -29,19 +28,20 @@
               name="username"
               id="username"
               [(ngModel)]="username"
+              autocomplete="off"
               required
-              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-indigo-600 sm:text-sm"
+              class="block w-full rounded-md tracking-wide -tracking-2 bg-white px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-indigo-600 sm:text-sm"
             />
           </div>
         </div>
 
         <div>
-          <label for="mobile" class="block text-sm/6 font-medium text-gray-900"
+          <label for="mobile" class="block text-sm/6 font-medium text-slate-100"
             >Mobile No</label
           >
           <div class="flex mt-2">
             <span
-              class="block w-1/4 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 sm:text-sm"
+              class="block w-1/4 rounded-md tracking-wide -tracking-2 bg-white px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 sm:text-sm"
               >+91</span
             >
             <input
@@ -52,6 +52,7 @@
               pattern="[0-9]{10}"
               maxlength="10"
               required
+              autocomplete="off"
               class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-indigo-600 sm:text-sm"
             />
           </div>

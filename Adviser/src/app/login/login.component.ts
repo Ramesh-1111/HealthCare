@@ -36,8 +36,10 @@ export class LoginComponent {
       .subscribe({
         next: (response) => {
           if (response.user) {
-            localStorage.setItem('token', response.token || ''); // ✅ Store token
-            this.router.navigate(['/dashboard']);
+            localStorage.setItem('token', response.token || '');
+            localStorage.setItem('username', this.username); // ✅ Store username
+            localStorage.setItem('mobile', this.mobile); // ✅ Store token
+            this.router.navigate(['/instructions']); // ✅ Navigate to instructions
           }
         },
         error: (error) => {

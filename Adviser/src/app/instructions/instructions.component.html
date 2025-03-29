@@ -1,0 +1,87 @@
+<div class="w-full flex justify-center mb-3">
+  <div class="w-9/10 rounded-xl bg-slate-500 flex items-center pl-2 text-2xl">
+    <span class="material-symbols-outlined mt-0.5"> developer_guide </span>
+    <h2 class="text-3xl text-indigo-300 font-bold p-3">Instructions</h2>
+  </div>
+</div>
+<main class="grid place-content-center text-lg">
+  <div class="grid grid-cols-2 gap-6 place-content-center text-slate-200">
+    <div class="height rounded-2xl bg-gray-800 p-3">
+      <div class="h">
+        <span class="material-symbols-outlined"> monitor_weight </span>
+
+        <h3>Height Measurement:</h3>
+      </div>
+
+      <ol class="mb-3 text-gray-500 dark:text-gray-400">
+        <li>Stand Straight: Keep your posture upright and face forward.</li>
+        <li>Position Correctly: Stand at the marked spot under the sensor.</li>
+        <li>Stay Still: Do not move while the robot measures your height.</li>
+        <li>
+          Remove Obstructions: Take off hats, caps, or anything on your head.
+        </li>
+      </ol>
+    </div>
+    <div class="weight rounded-2xl bg-indigo-800 p-3">
+      <h3>Weight Measurement:</h3>
+      <ol class="mb-3 text-gray-500 dark:text-gray-400">
+        <li>Stand Straight: Keep your posture upright and balanced.</li>
+        <li>
+          Position Correctly: Stand at the center of the weighing platform.
+        </li>
+        <li>
+          Stay Still: Avoid moving or shifting weight while the measurement is
+          taken.
+        </li>
+        <li>
+          Remove Extra Items: Take off heavy accessories like bags, coats, or
+          shoes.
+        </li>
+      </ol>
+    </div>
+    <div class="temparature rounded-2xl bg-slate-800 p-3">
+      <h3>Temperature Measurement</h3>
+      <ol class="mb-3 text-gray-500 dark:text-gray-400">
+        <li>Keep your wrist or back of your hand facing the sensor.</li>
+        <li>Show your hand 1 cm away from the sensor</li>
+        <li>Avoid moving while the sensor takes the reading.</li>
+      </ol>
+    </div>
+    <div class="pulse rounded-2xl bg-pink-800 p-3">
+      <h3>Pulse Oximeter Measurement:</h3>
+      <ol class="mb-3 text-gray-500 dark:text-gray-400">
+        <li>Rest your hand on a flat surface and keep it still.</li>
+        <li>Insert your index or middle finger fully into the oximeter.</li>
+        <li>Stay still during the measurement to get an accurate reading.</li>
+        <li>
+          Ensure your fingernail is clean and free of polish or artificial nails
+          for accurate results.
+        </li>
+      </ol>
+    </div>
+  </div>
+</main>
+<div class="mt-5 next flex justify-end pr-10">
+  <button
+    type="button"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    (click)="Next()"
+  >
+    <svg
+      class="w-28 h-6"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 14 10"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M1 5h12m0 0L9 1m4 4L9 9"
+      />
+    </svg>
+    <span class="sr-only">Icon description</span>
+  </button>
+</div>
